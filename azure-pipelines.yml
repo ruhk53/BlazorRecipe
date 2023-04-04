@@ -21,11 +21,6 @@ steps:
     version: '6.x'
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- script: |
-    echo "Listing directory structure:"
-    find . -type d -or -type f -print
-  displayName: 'List directory structure'
-
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
